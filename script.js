@@ -142,7 +142,7 @@ const nameInput = document.getElementById("nameInput");
 const formMessage = document.getElementById("formMessage");
 const submitButton = document.querySelector(".button__send");
 
-const TOKEN = "8949638817:AAGZzC_fbV_545Sn7ZeZOE18UD-BNTrcQgU";
+const TOKEN = "8949638817:AAHZb4NZ3z2y9T25PEbMJYoP3P4Lkc-Z4aY";
 const CHAT_ID = "-5120123334";
 
 form.addEventListener("submit", async function (e) {

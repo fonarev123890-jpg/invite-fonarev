@@ -433,7 +433,7 @@ input::placeholder {
   width: 80px;
   height: 80px;
 
-  background-image: url("/love.png");
+  background-image: url("./love.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
