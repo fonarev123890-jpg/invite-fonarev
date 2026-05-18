@@ -1,0 +1,874 @@
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+footer {
+  padding-block: 50px;
+}
+.ryadom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.anketa__block {
+  padding-top: 100px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+
+.plan__day {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.img-font {
+  width: 250px;
+  height: 250px;
+}
+
+.plan__day__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  height: 260px;
+  max-width: 520px;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+/* Когда элемент появился */
+.plan__day__item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.plan__day__item:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.plan__day__item:nth-child(2) {
+  transition-delay: 0.5s;
+}
+
+.palka {
+  width: 1px;
+  height: 50%;
+  border: 1px solid white;
+}
+
+.text--plan {
+  width: 280px;
+  font-size: 17px;
+  color: #5d524d;
+  transform: translateX(-50px);
+}
+
+.button-map {
+  border: 1px solid rgb(0, 0, 0);
+  width: 190px;
+  height: 60px;
+  font-size: 14px;
+}
+
+.map-container {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+.map-container.open {
+  max-height: 400px; /* Высота карты */
+}
+.button-map {
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+  width: 190px;
+  height: 60px;
+  font-size: 14px;
+}
+
+.footer__font {
+  font-size: 22px;
+}
+
+.footer__box {
+  gap: 20px;
+}
+.video {
+  position: fixed;
+  z-index: -1 !important;
+}
+
+.video__style {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* min-width: 100vw;
+  min-height: 100vh; */
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 1200px;
+  padding-inline: 200px;
+}
+
+.box-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  min-width: 800px;
+  padding-inline: 70px;
+  padding-bottom: 60px;
+}
+
+.bg__visible {
+  background-color: rgb(223, 210, 192);
+}
+
+.bg__opacity {
+  background-color: rgb(223, 210, 192, 70%);
+}
+
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("ceremoniousone.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MyCustomFont2";
+  src: url("TrajanPro3Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Italic";
+  src: url("Montserrat-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Medium";
+  src: url("Montserrat-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font__italic {
+  font-family: "Italic", sans-serif;
+}
+.font__medium {
+  font-family: "Medium", sans-serif;
+}
+
+.svad {
+  font-family: "MyCustomFont", sans-serif;
+  font-size: 120px;
+}
+
+.svad__small {
+  font-family: "MyCustomFont", sans-serif;
+  font-size: 60px;
+}
+
+.base {
+  font-family: "MyCustomFont2", sans-serif;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.time {
+  font-size: 45px;
+}
+
+.plus__translate {
+  transform: translateY(60px);
+}
+
+.minus__translate {
+  transform: translateY(-120px);
+}
+.minus__translate__base {
+  transform: translateY(-60px);
+}
+
+.low_translate {
+  transform: translateY(-20px);
+}
+
+.double__svad {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+
+.invite__block {
+  margin-bottom: 100px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.only__flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.button__send {
+  border: 1px solid #5d524d;
+  border-radius: 20px;
+  padding-inline: 15px;
+  width: 160px;
+  height: 60px;
+}
+
+.anketa__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input__value {
+  height: 60px;
+  width: 600px;
+  padding-inline: 20px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid rgb(5, 5, 5);
+}
+
+.opacitys {
+  opacity: 40%;
+}
+
+.frame {
+  position: relative;
+  display: inline-block;
+}
+
+.frames {
+  position: relative;
+  display: inline-block;
+}
+.framew {
+  position: relative;
+  display: inline-block;
+}
+
+.color__block {
+  max-width: 500px;
+  width: 100%;
+  height: 100px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  background: none; /* Очень слабая белая заливка */
+  backdrop-filter: blur(10px); /* Размытие того, что за блоком */
+}
+
+.strelka__ani {
+  transform: rotate(-90deg);
+  animation: strelka 1s ease infinite;
+}
+
+@keyframes strelka {
+  0% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+input::placeholder {
+  color: gray !important;
+}
+
+/* Рисуем уголок */
+.frame::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  width: 40px; /* Заданный вами размер */
+  height: 40px; /* Заданный вами размер */
+  border-top: 1px solid #fff; /* Толщина линии уголка */
+  border-left: 1px solid #fff;
+}
+
+.frames::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  width: 40px; /* Заданный вами размер */
+  height: 40px; /* Заданный вами размер */
+  border-top: 1px solid #fff; /* Толщина линии уголка */
+  border-left: 1px solid #fff;
+}
+.framew::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -15px;
+  width: 40px; /* Заданный вами размер */
+  height: 40px; /* Заданный вами размер */
+  border-top: 1px solid #fff; /* Толщина линии уголка */
+  border-left: 1px solid #fff;
+}
+
+/* остюда календарь */
+
+.card {
+  width: 360px;
+  padding: 28px;
+  text-align: center;
+}
+.date-header {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  color: #5d524d;
+}
+
+.divider {
+  height: 1px;
+  width: 60px;
+  background: rgb(255, 255, 255);
+  margin: 8px auto 22px;
+}
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  justify-items: center;
+  margin-bottom: 22px;
+}
+.cell {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 500;
+  border-radius: 6px;
+}
+.cell.empty {
+  color: transparent;
+}
+.cell.selected {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+
+  z-index: 1;
+}
+
+/* САМО СЕРДЦЕ */
+
+.cell.selected::before {
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+
+  background-image: url("/love.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  animation: heartBeat 3s ease-in-out infinite;
+}
+
+/* АНИМАЦИЯ */
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.note {
+  color: var(--muted);
+  margin-bottom: 20px;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+}
+.counters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.counter {
+  width: 64px;
+  height: 64px;
+  background: var(--circle);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+.counter .num {
+  font-size: 18px;
+  color: var(--accent);
+}
+.counter .label {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+@media (max-width: 380px) {
+  .card {
+    width: 92%;
+    padding: 18px;
+  }
+}
+/* приглашение */
+
+/* ===== ЗАСТАВКА ===== */
+
+body.lock {
+  overflow: hidden;
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.intro__blur {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(223, 210, 192, 0.35);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.intro__content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.site {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__top {
+  font-family: "MyCustomFont2", sans-serif;
+  font-size: 42px;
+  letter-spacing: 3px;
+  color: #3e312d;
+  animation: moveText 2s ease-in-out;
+}
+
+.intro__title {
+  font-family: "MyCustomFont", sans-serif;
+  font-size: 90px;
+  margin-top: -10px;
+  color: #6f5650;
+  animation: moveText 2s ease-in-out;
+}
+
+.intro__text {
+  margin-top: 30px;
+
+  font-size: 28px;
+  line-height: 1.5;
+  color: #4a3c38;
+  animation: moveText 2s ease-in-out;
+  font-family: "Medium", sans-serif;
+}
+
+/* КНОПКА СЕРДЦЕ */
+
+.heart-btn {
+  width: 180px;
+  height: 180px;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 90px;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  animation: heartBeats 4s ease-in-out infinite;
+}
+
+/* АНИМАЦИЯ */
+
+@keyframes heartBeats {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.heart-btn:hover {
+  transform: scale(1.08);
+}
+
+.heart-btn:active {
+  transform: scale(0.96);
+}
+
+/* ПЛАВНОЕ ИСЧЕЗНОВЕНИЕ */
+
+.intro.hide {
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: sans-serif;
+  color: #4a403a; /* Цвет текста подбирайте под ваш фон */
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+/* Скрываем стандартный инпут */
+.radio-button input {
+  display: none;
+}
+
+/* Создаем внешнее кольцо */
+.radio-circle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #8e7f77; /* Цвет рамки */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Создаем внутреннюю точку при выборе */
+.radio-button input:checked + .radio-circle::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #5d524d; /* Цвет точки */
+  border-radius: 50%;
+}
+
+.button__send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.day_love {
+  font-size: 20px;
+  width: 700px;
+}
+
+.title__in__plan {
+  width: 400px;
+  height: 100px;
+  position: relative;
+}
+
+.map-desktop {
+  display: block;
+}
+
+.map-mobile {
+  display: none;
+}
+
+.form-message {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Medium", sans-serif;
+}
+
+.form-message.success {
+  color: green;
+}
+
+.form-message.error {
+  color: red;
+}
+
+.input-error {
+  border: 2px solid red !important;
+}
+
+@media (max-width: 1200px) {
+  .plan__day {
+    flex-direction: column; /* При ширине экрана 600px и меньше элементы располагаются в колонку */
+  }
+  .box {
+    padding-inline: 0;
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .box-plan {
+    width: 100%;
+    max-width: 100%;
+    /* max-width: 1100px; */
+    min-width: 0;
+    padding-inline: 0;
+  }
+  .footer__box__text {
+    max-width: 700px;
+  }
+  .input__value {
+    max-width: 600px;
+  }
+  .usadba {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name_svad {
+    transform: translateY(-70px);
+  }
+  .box {
+    padding-inline: 0;
+    max-width: 400px;
+  }
+  .box-plan {
+    max-width: 400px;
+    padding-inline: 0;
+  }
+  .input__value {
+    max-width: 350px;
+  }
+  .usadba {
+    max-width: 400px;
+    width: 90%;
+  }
+  .peremen {
+    max-width: 400px;
+    font-size: 23px;
+    text-align: left;
+    line-height: 1.4;
+    padding-inline: 40px;
+  }
+  .day_love {
+    max-width: 320px;
+  }
+  .frame {
+    max-width: 400px;
+    width: 90%;
+  }
+  .video__style {
+    max-width: 479px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .svad {
+    font-size: 90px;
+  }
+  .svad__small {
+    font-size: 50px;
+  }
+  .title__in__plan {
+    max-width: 400px;
+    width: 100%;
+  }
+  .color__block {
+    max-width: 400px;
+    width: 90%;
+  }
+  .text__color__praz {
+    max-width: 400px;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .time {
+    font-size: 26px;
+  }
+  .plan__day__item {
+    gap: 10px;
+  }
+  .text--plan {
+    transform: translateX(0);
+  }
+  .adress__text {
+    font-size: 28px;
+  }
+  .color__text {
+    max-width: 320px;
+  }
+  .footer__box__text {
+    font-size: 18px;
+  }
+  .low_translate {
+    transform: translateY(0);
+  }
+  .special_translate {
+    transform: translateY(-40px);
+  }
+  .peremen {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .weekdays {
+    font-size: 18px;
+  }
+  .grid {
+    font-size: 18px;
+  }
+  .note {
+    font-size: 20px;
+  }
+  .footer__box__text {
+    text-align: center;
+  }
+  .map-desktop {
+    display: none;
+  }
+
+  .map-mobile {
+    display: block;
+  }
+  .framew::before {
+    left: 15px;
+  }
+  .frame::before {
+    left: 5px;
+    top: 10px;
+  }
+  .text__color__praz {
+    text-align: left;
+    transform: translateX(-30px);
+  }
+  .mob-ver {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

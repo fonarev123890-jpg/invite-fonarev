@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Приглашение</title>
+    <link rel="icon" type="image/png" href="/email.png">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="video">
+        <video class="video__style" id="video" loop muted playsinline>
+        <source src="video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="intro" id="intro">
+  <div class="intro__blur"></div>
+
+  <div class="intro__content">
+    <p class="intro__top">ВАМ ПРИШЛО</p>
+    <p class="intro__title">Приглашение</p>
+
+    <button class="heart-btn" id="openInvite">
+      <img src="./lovepngzas.png" alt="">
+    </button>
+
+    <p class="intro__text">
+      нажмите, чтобы открыть<br />
+      приглашение
+    </p>
+  </div>
+</div>
+
+<!-- МУЗЫКА -->
+<audio id="bgMusic" loop>
+  <source src="Стинг - Shape of my heart [muzce.com].mp3" type="audio/mpeg" />
+</audio>
+    
+    <div id="site" class="site">
+      <header>
+        <div class="ryadom invite__block">
+          <p class="base plus__translate ">ПРИГЛАШЕНИЕ</p>
+          <p class="svad opacitys low_translate">на свадьбу</p>
+        </div>
+        <div class="svad ryadom name_svad">
+          <p class="plus__translate">Демьян</p>
+          <p style="font-size: 140px;" class="opacitys">&</p>
+          <p class="minus__translate__base">Наталья</p>
+        </div>
+      </header>
+      <main class="flex">
+        <div class="box bg__opacity">
+          <div class="svad double__svad" style="width: 300px; height: 230px; position: relative;" >
+            <p style="position: absolute;">Дорогие</p> 
+            <p class="special_translate" style="position: absolute; right: 0; bottom: 0;">гости</p>
+          </div>
+          <div class="framew"> <p class="font__italic peremen" style="font-size: 20px;">
+            В нашей жизни предстоят счастливые перемены! Мы хотим, чтобы в этот
+            день рядом с нами были самые близкие и дорогие для нас люди. Мы рады
+            пригласить Вас стать свидетелями этого торжества и разделить с нами
+            самые яркие моменты.
+          </p></div>
+         
+          <div>
+           
+            <div class="card">
+    <div class="date-header">29 АВГУСТА 2026</div>
+    <div class="divider"></div>
+
+    <div class="weekdays" id="weekdays"></div>
+    <div class="grid" id="grid"></div>
+
+    <div class="note">До одного из главных событий нашей жизни осталось...</div>
+
+    <div class="counters">
+      <div class="counter">
+        <div class="num" id="days">0</div>
+        <div class="label">дней</div>
+      </div>
+      <div class="counter">
+        <div class="num" id="hours">0</div>
+        <div class="label">часов</div>
+      </div>
+      <div class="counter">
+        <div class="num" id="minutes">0</div>
+        <div class="label">минут</div>
+      </div>
+      <div class="counter">
+        <div class="num" id="seconds">0</div>
+        <div class="label">секунд</div>
+      </div>
+    </div>
+  </div>
+        </div>
+            
+        </div>
+
+        <div class="box-plan bg__visible">
+          <div class="svad double__svad" style="width: 300px; height: 230px; position: relative;" >
+            <p style="position: absolute;">План</p> 
+            <p class="special_translate" style="position: absolute; right: 0; bottom: 0;">дня</p>
+          </div>
+          <div class="frames"> <p class="font__italic day_love">
+            Наш день будет наполнен любовью, радостью и тёплыми моментами. Ниже
+            — программа торжества, чтобы вы могли быть частью каждого из них.
+          </p></div>
+         
+
+          <div class="font__italic plan_flex">
+            <div class="plan__day">
+
+              <div class="plan__day__item">
+                <p class="base time">17:00</p>
+                <div class="palka"></div>
+                <div class="flex">
+                  <div class="title__in__plan" >
+                    <p class="svad__small" style="position: absolute">Сбор гостей</p> 
+                  </div>
+                  <p class="text--plan">Захватите с собой хорошее настроение и свои улыбки</p>
+                </div>
+              </div>
+
+              <div class="plan__day__item">
+                <p class="base time">17:30</p>
+                <div class="palka"></div>
+                <div class="flex">
+                  <div class="title__in__plan" >
+                    <div class="svad__small" style="position: absolute">Торжественная <p style="position: absolute; right: 0; top: 28px;">церемония</p></div> 
+                  </div>
+                  <p class="text--plan">Вы станете свидетелями создания нашей семьи</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="plan__day">
+              <div class="plan__day__item">
+                <p class="base time">18:30</p>
+                <div class="palka"></div>
+                <div class="flex">
+                  <div class="title__in__plan" >
+                    <div class="svad__small" style="position: absolute;">Начало <p style="position: absolute; left: 110px; top: 28px;">банкета</p></div> 
+                  </div>
+                  <p class="text--plan">Время вкусной еды, танцев и развлечений</p>
+                </div>
+              </div>
+
+              <div class="plan__day__item">
+                <p class="base time">00:00</p>
+                <div class="palka"></div>
+                <div class="flex">
+                  <div class="title__in__plan" style="transform: translateY(-15px);" >
+                    <div class="svad__small" style="position: absolute"><span>Завершение</span> <div style="position: absolute; white-space: nowrap; top: 33px;">официальной части</div></div> 
+                  </div>
+                  <p class="text--plan">Спасибо, что разделили с нами этот день</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="box bg__opacity">
+          <div class="box" style="padding-bottom: 50px;"><p class="svad">Локация</p>
+            <div class="flex" style="gap: 20px;"><p class="base adress__text" style="color: #5d524d;">УСАДЬБА ГОЛИЦЫНЫХ</p>
+          <img src="/примерфото.jpg" class="usadba">
+              <div class="divider" style="transform: translateY(15px);"></div>
+          <p class="font__medium" style="color: #5d524d; font-size: 24px;">ул. Левобережная, 3-а</p>
+          <button class="button-map" style="margin-bottom: 30px;">КАРТА →</button></div>
+          <div class="map-container"><div class=" map-desktop">
+  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A98c4b40633dc07ef8ea44563d924ed1f154ea8348a3785c5f2160595262160a4&amp;source=constructor" width="800" height="707" frameborder="0"></iframe></div>
+  <div class=" map-mobile">
+  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A98c4b40633dc07ef8ea44563d924ed1f154ea8348a3785c5f2160595262160a4&amp;source=constructor" width="350" height="350" frameborder="0"></iframe></div>
+</div>
+</div>
+          <div class="box bg__visible font__italic" style="padding-bottom: 50px;">
+          <p class="svad">Детали</p>
+          <img src="/blacklove.webp" style="width: 80px; height: 80px;">
+          <div class="mob-ver"><div class="frame"><p style="font-size: 20px; padding: 20px;">Ваша улыбка и хорошее настроение - главное для нас в этот вечер</p></div>
+          <div class="frame"><p style="font-size: 20px; padding: 20px;">Мы будем счастливы видеть вас с детьми! Пожалуйста, сообщите нам об этом заранее</p></div>
+          <div class="frame"><p style="font-size: 20px; padding: 20px;">Давайте вместе создадим волшебные воспоминания</p></div>
+          <div class="frame"><p style="font-size: 20px; padding: 20px;">Будет замечательно - если вы вместо цветов подарите нам на память любую бутылку алкоголя с подписью вашей фамилии</p></div>
+        </div>
+          </div>
+
+        <div class="box font__medium">
+          <p class="svad">Дресс-код</p>
+          <p class="font__medium color__text" style="width: 450px; margin-bottom: 30px;">
+            Мы будем очень благодарны, если вы поддержите стиль нашей свадьбы.
+          </p>
+          <div class="flex" style="gap: 10px; margin-bottom: 40px;">
+            <p class="base flex" style="color: #5d524d;">Для девушек</p>
+            <p class="text__color__praz"><span style="display: block;">- Пастельные тона</span> <span style="display: block;">- Просим воздержаться от белого и черного цвета</span> </p>
+          </div>
+          <div class="flex" style="gap: 10px;">
+            <p class="base flex" style="color: #5d524d;">Для мужчин</p>
+            <p class="text__color__praz">
+<span style="display: block;">- Пожалуйста, избегайте джинсов и спортивной одежды</span> 
+  <span style="display: block;">- Подходящими вариантами будут рубашки, пиджаки или стильные поло</span> </p>
+          </div>
+        </div>
+
+        <div class="box anketa__block">
+    <p class="svad">Анкета</p>
+    <p class="base" style="font-size: 25px; text-align: center; color: #5d524d;">Просьба подтвердить <br> присутствие до 15 июля </p>
+    <div><img src="/strelka.webp" style="rotate: -90deg;" class="strelka__ani"></div>
+    <form id="anketaForm" class="only__flex font__medium" style="gap: 25px;">
+        <label class="only__flex">Ваше имя и фамилия
+            <input id="nameInput" class="input__value" type="text" placeholder="Иван Иванов">
+        </label>
+        <div class="only__flex radio-group">
+            Получится ли у вас присутствовать?
+            <label class="radio-button"><input type="radio" name="attendance" value="yes" checked><span class="radio-circle"></span>Да</label>
+            <label class="radio-button"><input type="radio" name="attendance" value="no"><span class="radio-circle"></span>Нет</label>
+        </div>
+        <div class="anketa__button"><button type="submit" class="button__send">Отправить</button></div>
+    </form>
+    <p id="formMessage" class="form-message"></p>
+</div>
+
+      </main>
+      <footer class="bg__opacity footer__font">
+        <div class="box font__medium">
+          <p class="svad">Контакты</p>
+          <div class="box footer__box" style="color: #5d524d;"><p class="footer__box__text">Если вы хотите сделать для нас необычный сюрприз или уточнить детали торжества, свяжитесь, пожалуйста, с нашим организатором</p>
+          <p>Екатерина <a href="tel:+79818861270">+7 (981) 886-12-70</a></p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<a href="https://t.me/+79526045933" target="_blank">
+    <i class="fab fa-telegram-plane" style="font-size: 70px;"></i>
+</a></div>
+          
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
