@@ -208,3 +208,63 @@ form.addEventListener("submit", async function (e) {
     submitButton.textContent = "Отправить";
   }
 });
+
+// слайдер
+
+const wrapper = document.querySelector(".slider-wrapper");
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const dotsContainer = document.getElementById("sliderDots");
+
+let currentIndex = 0;
+const totalSlides = slides.length;
+
+// Создание точек
+for (let i = 0; i < totalSlides; i++) {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll(".dot");
+
+function updateSlider() {
+  wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentIndex);
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlider();
+}
+
+function goToSlide(index) {
+  currentIndex = index;
+  updateSlider();
+}
+
+// События кнопок
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+// Автопрокрутка (каждые 5 секунд)
+let autoPlay = setInterval(nextSlide, 5000);
+
+// Приостановка автопрокрутки при наведении
+wrapper.parentElement.addEventListener("mouseenter", () =>
+  clearInterval(autoPlay),
+);
+wrapper.parentElement.addEventListener(
+  "mouseleave",
+  () => (autoPlay = setInterval(nextSlide, 5000)),
+);
