@@ -219,6 +219,8 @@ const dotsContainer = document.getElementById("sliderDots");
 
 let currentIndex = 0;
 const totalSlides = slides.length;
+let startX = 0;
+let endX = 0;
 
 // Создание точек
 for (let i = 0; i < totalSlides; i++) {
@@ -257,14 +259,46 @@ function goToSlide(index) {
 nextBtn.addEventListener("click", nextSlide);
 prevBtn.addEventListener("click", prevSlide);
 
-// Автопрокрутка (каждые 5 секунд)
-let autoPlay = setInterval(nextSlide, 5000);
+// Обработка касаний
+wrapper.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
 
-// Приостановка автопрокрутки при наведении
-wrapper.parentElement.addEventListener("mouseenter", () =>
-  clearInterval(autoPlay),
-);
-wrapper.parentElement.addEventListener(
-  "mouseleave",
-  () => (autoPlay = setInterval(nextSlide, 5000)),
-);
+wrapper.addEventListener("touchmove", (e) => {
+  endX = e.touches[0].clientX;
+});
+
+wrapper.addEventListener("touchend", () => {
+  if (startX - endX > 50) {
+    nextSlide(); // Свайп влево
+  } else if (endX - startX > 50) {
+    prevSlide(); // Свайп вправо
+  }
+});
+
+// Обработка мыши
+let isDragging = false;
+
+wrapper.addEventListener("mousedown", (e) => {
+  startX = e.clientX;
+  isDragging = true;
+});
+
+wrapper.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  endX = e.clientX;
+});
+
+wrapper.addEventListener("mouseup", () => {
+  if (!isDragging) return;
+  isDragging = false;
+  if (startX - endX > 50) {
+    nextSlide(); // Перетаскивание влево
+  } else if (endX - startX > 50) {
+    prevSlide(); // Перетаскивание вправо
+  }
+});
+
+wrapper.addEventListener("mouseleave", () => {
+  isDragging = false; // Сброс флага, если мышь покинула область
+});
